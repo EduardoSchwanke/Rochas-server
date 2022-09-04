@@ -10,4 +10,4 @@ router.delete('/posts/:id', postController.delete)
 
 router.post('/user', postController.user)
 
-module.exports = router
+module.exports = router 
