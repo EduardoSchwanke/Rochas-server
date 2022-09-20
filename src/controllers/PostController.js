@@ -13,9 +13,9 @@ module.exports = {
     }, 
 
     async createPost(req, res){
-        const {title, description, type, photo} = req.body
+        const {title, description, type, imgURL} = req.body
 
-        if(!title || !description || !photo || !type){
+        if(!title || !description || !imgURL || !type){
             res.status(400).json({error: 'missing some input required.'})
         }
 
@@ -24,7 +24,7 @@ module.exports = {
             title,
             description,
             type,
-            photo
+            imgURL
         })
 
         try{
