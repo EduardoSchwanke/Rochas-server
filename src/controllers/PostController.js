@@ -69,7 +69,7 @@ module.exports = {
         const post = await Post.findById(id)
 
         try{
-            await post.remove()
+            await Post.remove()
 
             res.status(200).json('post deleted with successfully')
         }catch(err){
